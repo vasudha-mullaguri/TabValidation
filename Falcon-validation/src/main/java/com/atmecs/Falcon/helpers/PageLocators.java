@@ -8,58 +8,40 @@ import com.atmecs.Falcon.utils.ReadProperties;
 public class PageLocators {
 
 	Properties property;
+	Properties property_valid;
 	public String dashboard;
 	public String recentRuns;
 	public String view;
-	public String dashboardele;
-	public String recent;
+	public String dashtitle;
+	public String recenttitle;
+	public String restimage;
+	public String resttext;
+	public String valrest;
+	public String tooltip_dashboard;
+	public String valtooltip_dash;
+	public String restapitable;
 	
 
-	public void  data() throws Exception {
-		
-	property=ReadProperties.loadProperty(FilePaths.LOGIN);
-	setDashboard();
-	setRecentRuns();
-	setView();
-	setDashboardele();
-	setRecent();
-	
-	
-	}
-	public String getRecent() {
-		return recent;
-	}
-	public void setRecent() {
-		recent =property.getProperty("loc.recent");
-	}
-	public String getDashboardele() {
-		return dashboardele;
-	}
-	public void setDashboardele() {
-		dashboardele =property.getProperty("loc.dashele");
-	}
-	public String getView() {
-		return view;
-	}
-	public void setView() {
-	view =property.getProperty("loc.view");
-	
-	}
-	public String getRecentRuns() {
-		return recentRuns;
-	}
-	public void setRecentRuns() {
-		recentRuns =property.getProperty("loc.recentruns");
-	}
-	public String getDashboard() {
-		return dashboard;
-	}
-	public void setDashboard() {
+	public void data() throws Exception {
+
+		property = ReadProperties.loadProperty(FilePaths.LOGIN);
+
 		dashboard = property.getProperty("loc.dashboard");
-	}
-	
-	
+		recentRuns = property.getProperty("loc.recentruns");
+		view = property.getProperty("loc.view");
+		dashtitle = property.getProperty("loc.dashele");
+		recenttitle = property.getProperty("loc.recent");
+		restimage = property.getProperty("loc.restimage");
+		resttext = property.getProperty("loc.resttext");
+		tooltip_dashboard = property.getProperty("loc_tooltip_dashboard");
+		restapitable=property.getProperty("loc.restapitable");
 
-	
 	}
 
+	public void getValidationData() throws Exception {
+		property_valid = ReadProperties.loadProperty(FilePaths.VALIDATION);
+		valrest = property_valid.getProperty("val.rest");
+		valtooltip_dash=property_valid.getProperty("val.tooltip_dash");
+	}
+
+}
