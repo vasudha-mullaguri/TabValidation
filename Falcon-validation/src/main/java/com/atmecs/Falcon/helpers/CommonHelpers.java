@@ -7,6 +7,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.atmecs.Falcon.constants.FilePaths;
 
 public class CommonHelpers {
 		
@@ -50,7 +54,8 @@ public class CommonHelpers {
 
 		public static void clickElement(WebDriver driver, String element) throws InterruptedException {
 			
-		driver.findElement(By.xpath(element)).click();
+			
+		    driver.findElement(By.xpath(element)).click();
 		
 		}
 		public static String getTitleOfPage(WebDriver driver)
@@ -68,9 +73,16 @@ public class CommonHelpers {
 		Actions action=new Actions(driver);
 		action.moveToElement(mouseOver).perform();
 		}
+		public static void explicitWait(WebDriver driver, String xpath) {
+			WebDriverWait wait = new WebDriverWait(driver, FilePaths.page_load_timeout);
+			WebElement element;
+			element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+			element.click();
 	}
-	   
 
+		
+	   
+}
 
 
 

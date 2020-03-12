@@ -18,6 +18,9 @@ import com.atmecs.Falcon.testsuite.BaseClass;
 
 public class LoginPageTest extends BaseClass {
 	Properties property;
+	public String actual;
+	public String actual1;
+	public String currentUrl;
 	PageLocators path=new PageLocators();
     @Test
 	public void locator() throws Exception {
@@ -25,20 +28,16 @@ public class LoginPageTest extends BaseClass {
         String currentUrl2 = driver.getCurrentUrl();
         System.out.println(currentUrl2);
 	 CommonHelpers.clickElement(driver,path.getDashboard());
-	 	 String actual=driver.findElement(By.xpath(path.getDashboardele())).getText(); 
+	 	 actual=driver.findElement(By.xpath(path.getDashboardele())).getText(); 
 	 	 System.out.println(actual);
 	 	 String expected = "Dashboard";
-		 try {
 			 Assert.assertEquals(actual,expected);
 			 System.out.println(actual  +" is present");
 			 
-			 } catch (AssertionError assertionError) {
-			 System.out.println(actual  +" is not present");
-			 
-			 }
 	 
 	  CommonHelpers.clickElement(driver, path.getRecentRuns());
-	  String actual1=driver.findElement(By.xpath(path.getRecent())).getText(); 
+	  CommonHelpers.explicitWait(driver,"//span[text()='Recent Runs']");
+	  actual1=driver.findElement(By.xpath(path.getRecentRuns())).getText();
 	 	 System.out.println(actual1);
 	 	 String expected1 = "Recent Runs";
 		 try {
@@ -51,7 +50,8 @@ public class LoginPageTest extends BaseClass {
 			 }
 	  
 	 CommonHelpers.clickElement(driver, path.getView());
-	 String currentUrl = driver.getCurrentUrl();
+	 CommonHelpers.explicitWait(driver,"//span[text()='View']");
+	  currentUrl = driver.getCurrentUrl();
 	 System.out.println(currentUrl);
 	 if(currentUrl!=currentUrl2)
 	 {
