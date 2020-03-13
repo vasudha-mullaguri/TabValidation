@@ -2,36 +2,38 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16233" started-at="2020-03-12T20:34:56 IST" finished-at="2020-03-12T20:35:12 IST">
+  <suite name="Default suite" duration-ms="17798" started-at="2020-03-13T19:47:44 IST" finished-at="2020-03-13T19:48:01 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16233" started-at="2020-03-12T20:34:56 IST" finished-at="2020-03-12T20:35:12 IST">
+    <test name="Default test" duration-ms="17798" started-at="2020-03-13T19:47:44 IST" finished-at="2020-03-13T19:48:01 IST">
       <class name="com.atmecs.Falcon.tests.LoginPageTest">
-        <test-method status="PASS" signature="invokeBrowser()[pri:0, instance:com.atmecs.Falcon.tests.LoginPageTest@5ae63ade]" name="invokeBrowser" is-config="true" duration-ms="12613" started-at="2020-03-12T20:34:56 IST" finished-at="2020-03-12T20:35:09 IST">
+        <test-method status="PASS" signature="invokeBrowser()[pri:0, instance:com.atmecs.Falcon.tests.LoginPageTest@5ae63ade]" name="invokeBrowser" is-config="true" duration-ms="15637" started-at="2020-03-13T19:47:44 IST" finished-at="2020-03-13T19:47:59 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invokeBrowser -->
-        <test-method status="FAIL" signature="locator()[pri:0, instance:com.atmecs.Falcon.tests.LoginPageTest@5ae63ade]" name="locator" duration-ms="3560" started-at="2020-03-12T20:35:09 IST" finished-at="2020-03-12T20:35:12 IST">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
+        <test-method status="FAIL" signature="locator()[pri:0, instance:com.atmecs.Falcon.tests.LoginPageTest@5ae63ade]" name="locator" duration-ms="2101" started-at="2020-03-13T19:47:59 IST" finished-at="2020-03-13T19:48:01 IST">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[stale element reference: element is not attached to the page document
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//h3[@class="ng-binding ng-scope"]"}
   (Session info: chrome=80.0.3987.132)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'ATMECSINDT-073', ip: '30.30.30.118', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\VASUDH~1.MUL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:53117}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: a74a2f2c1c929c16591f36833a5ac6b4]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\VASUDH~1.MUL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55204}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 53411e12c65c480e7d14eeb972dae8f9
+*** Element info: {Using=xpath, value=//h3[@class="ng-binding ng-scope"]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h3[@class="ng-binding ng-scope"]"}
   (Session info: chrome=80.0.3987.132)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'ATMECSINDT-073', ip: '30.30.30.118', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\VASUDH~1.MUL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:53117}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: a74a2f2c1c929c16591f36833a5ac6b4
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\VASUDH~1.MUL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55204}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 53411e12c65c480e7d14eeb972dae8f9
+*** Element info: {Using=xpath, value=//h3[@class="ng-binding ng-scope"]}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -42,10 +44,13 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCo
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at com.atmecs.Falcon.helpers.CommonHelpers.explicitWait(CommonHelpers.java:82)
-at com.atmecs.Falcon.tests.LoginPageTest.locator(LoginPageTest.java:62)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at com.atmecs.Falcon.helpers.CommonHelpers.findElement(CommonHelpers.java:26)
+at com.atmecs.Falcon.helpers.CommonHelpers.textvalidate(CommonHelpers.java:103)
+at com.atmecs.Falcon.tests.LoginPageTest.locator(LoginPageTest.java:54)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -76,7 +81,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- locator -->
