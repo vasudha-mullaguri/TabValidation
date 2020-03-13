@@ -11,6 +11,7 @@ public class LoginPageTest extends BaseClass {
 	
 	public String actual;
 	public String actual1;
+	public String actual2;
 	public String currentUrl;
 	PageLocators path = new PageLocators();
 
@@ -22,53 +23,54 @@ public class LoginPageTest extends BaseClass {
 		
 		String currentUrl2 = driver.getCurrentUrl();
 		System.out.println(driver.getCurrentUrl());
-		System.out.println("test:"+path.dashboard);
+		//System.out.println("test:"+path.dashboard);
 		
 		CommonHelpers.clickElement(driver, path.dashboard);
-		actual = driver.findElement(By.xpath(path.dashtitle)).getText();
-		System.out.println(actual);
-		String expected = "Dashboard";
-		Assert.assertEquals(actual, expected);
-		System.out.println(actual + " is present");
 		
-		String actual=CommonHelpers.findElement(driver, "Xpath", path.restapitable).getText();
-		System.out.println(actual);
+		CommonHelpers.textvalidate(driver, path.dashtitle, path.val_dashtitle);
+		
+		//CommonHelpers.textvalidate(driver, path.restapitable, path.val_restapitable);
+		//String actual=CommonHelpers.findElement(driver, "Xpath", path.restapitable).getText();
+		//System.out.println(actual);
+		CommonHelpers.textvalidate(driver, path.restapitable, path.val_restapitable);
 		
 		CommonHelpers.validateImage(driver,path.restimage);
 		
-		CommonHelpers.textvalidate(driver, path.resttext, path.valrest);
 		
-		CommonHelpers.tooltip(driver, path.tooltip_dashboard, "title", path.valtooltip_dash);
+		CommonHelpers.textvalidate(driver, path.restapitext, path.valrest);
 		
-		CommonHelpers.clickElement(driver, path.recentRuns);
+		CommonHelpers.valtooltip(driver, path.tooltip_dashboard, "title", path.valtooltip_dash);
 		
-		CommonHelpers.explicitWait(driver, path.recentRuns);
+		CommonHelpers.valtooltip(driver, path.rest_tooltip_bar, "uib-tooltip", path.val_rest_tooltip_bar);
 		
+		CommonHelpers.valtooltip(driver, path.rest_tooltip_10, "uib-tooltip", path.val_rest_tooltip_10);
 		
-		actual1 = driver.findElement(By.xpath(path.recenttitle)).getText();
-		System.out.println(actual1);
-		String expected1 = "Recent Runs";
-		try {
-			Assert.assertEquals(actual1, expected1);
-			System.out.println(actual1 + " is present");
-
-		} catch (AssertionError assertionError) {
-			System.out.println(actual1 + " is not present");
-
-		}
-	
-
-		CommonHelpers.clickElement(driver, path.view);
+		CommonHelpers.valtooltip(driver,path.rest_tooltip_90,"uib-tooltip" ,path.val_rest_tooltip_90);
 		
-		CommonHelpers.explicitWait(driver, path.view);
+		CommonHelpers.clickElement(driver, path.restapitext);
 		
-		currentUrl = driver.getCurrentUrl();
-		System.out.println(currentUrl);
-		if (currentUrl != currentUrl2) {
-			System.out.println("User succefully redirected");
-		} else {
-			System.out.println("user in not redirected");
-		}
+		CommonHelpers.explicitWait(driver, path.restapitext);
+		
+		CommonHelpers.textvalidate(driver, path.restapi_heading, path.val_restapi_heading);
+		
+		//CommonHelpers.clickElement(driver, path.recentRuns);
+		
+		/*
+		 * CommonHelpers.explicitWait(driver, path.recentRuns);
+		 * 
+		 * CommonHelpers.textvalidate(driver, path.recentRuns, path.val_resttitle);
+		 * 
+		 * 
+		 * 
+		 * CommonHelpers.clickElement(driver, path.view);
+		 * 
+		 * CommonHelpers.explicitWait(driver, path.view);
+		 * 
+		 * currentUrl = driver.getCurrentUrl(); System.out.println(currentUrl); if
+		 * (currentUrl != currentUrl2) {
+		 * System.out.println("User succefully redirected"); } else {
+		 * System.out.println("user in not redirected"); }
+		 */
 		
 		
 		

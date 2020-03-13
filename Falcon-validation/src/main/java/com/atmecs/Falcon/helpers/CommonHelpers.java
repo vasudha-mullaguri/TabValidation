@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.asserts.Assertion;
@@ -79,13 +80,28 @@ public class CommonHelpers {
 		WebDriverWait wait = new WebDriverWait(driver, FilePaths.page_load_timeout);
 		WebElement element1;
 		element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(element)));
-		element1.click();
+//		element1.click();
 	}
+	/*
+	 * public static void dropDown(WebDriver driver, String mainMenu, String
+	 * subMenu, String action) throws Exception {
+	 * 
+	 * if (action.equalsIgnoreCase("select")) { WebElement element = CommonHelpers.f
+	 * indElement(driver, mainMenu); Select select = new Select(element);
+	 * select.selectByVisibleText(subMenu); } else if
+	 * (action.equalsIgnoreCase("click")) { CommonHelpers.clickElement(driver,
+	 * CommonHelpers.findElement(driver, mainMenu));
+	 * CommonHelpers.clickElement(driver, CommonHelpers.findElement(driver,
+	 * subMenu)); } else if (action.equalsIgnoreCase("mouseover")) {
+	 * CommonHelpers.mouseMoveOver(driver, mainMenu);
+	 * CommonHelpers.clickElement(driver, CommonHelpers.findElement(driver,
+	 * subMenu)); } }
+	 */
+
 
 	public static void textvalidate(WebDriver driver, String xpath, String expected) {
 		String actual = CommonHelpers.findElement(driver, "Xpath", xpath).getText();
-		System.out.println(actual);
-		System.out.println(expected);
+		
 		try {
 			Assert.assertEquals(actual, expected);
 			System.out.println("assertion passed:" + actual);
@@ -109,7 +125,7 @@ public class CommonHelpers {
 
 	}
 
-	public static void tooltip(WebDriver driver, String path,String attribute,String expectedAttribute) {
+	public static void valtooltip(WebDriver driver, String path,String attribute,String expectedAttribute) {
 	String actualAttribute = driver.findElement(By.xpath(path)).getAttribute(attribute);
 	try {
 	Assert.assertEquals(actualAttribute, expectedAttribute);
