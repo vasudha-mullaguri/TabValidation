@@ -32,6 +32,13 @@ public class PageLocators {
     public String restapi_heading;
     public String val_restapi_heading;
     
+    public String dropdown_customer;
+    public String customer_option;
+    public String dropdown_module;
+    public String module_option;
+    public String dropdown_status;
+    public String status_option;
+    
 
 	
 	public void data() throws Exception {
@@ -51,6 +58,13 @@ public class PageLocators {
 		rest_tooltip_10 = property.getProperty("loc.rest_tooltip_10");
 		rest_tooltip_90=property.getProperty("loc.rest_tooltip_90%");
 		restapi_heading=property.getProperty("loc.restapi_heading");
+		
+		dropdown_customer = property.getProperty("loc_dropdown_customer");
+		customer_option = property.getProperty("loc_customer_option");
+		dropdown_module = property.getProperty("loc_dropdown_module");
+		module_option = property.getProperty("loc_module_option");
+		dropdown_status = property.getProperty("loc_dropdown_status");
+		status_option = property.getProperty("loc_status_option");
 
 	}
 

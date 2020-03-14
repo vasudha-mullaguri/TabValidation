@@ -82,22 +82,14 @@ public class CommonHelpers {
 		element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(element)));
 //		element1.click();
 	}
-	/*
-	 * public static void dropDown(WebDriver driver, String mainMenu, String
-	 * subMenu, String action) throws Exception {
-	 * 
-	 * if (action.equalsIgnoreCase("select")) { WebElement element = CommonHelpers.f
-	 * indElement(driver, mainMenu); Select select = new Select(element);
-	 * select.selectByVisibleText(subMenu); } else if
-	 * (action.equalsIgnoreCase("click")) { CommonHelpers.clickElement(driver,
-	 * CommonHelpers.findElement(driver, mainMenu));
-	 * CommonHelpers.clickElement(driver, CommonHelpers.findElement(driver,
-	 * subMenu)); } else if (action.equalsIgnoreCase("mouseover")) {
-	 * CommonHelpers.mouseMoveOver(driver, mainMenu);
-	 * CommonHelpers.clickElement(driver, CommonHelpers.findElement(driver,
-	 * subMenu)); } }
-	 */
-
+	
+	  public static List<WebElement> dropDown(WebDriver driver, String mainMenu, String subMenu) throws Exception {
+		  WebElement element = driver.findElement(By.xpath("//option[text()='Select Customer']/parent::select"));
+		  Select select = new Select(element);
+		  select.selectByVisibleText(subMenu);
+		  List<WebElement> elements = select.getOptions();
+		  return elements;
+	  }
 
 	public static void textvalidate(WebDriver driver, String xpath, String expected) {
 		String actual = CommonHelpers.findElement(driver, "Xpath", xpath).getText();
@@ -135,4 +127,5 @@ public class CommonHelpers {
 		System.out.println("Attribute not found"+e.getMessage());
 	}
 	}
+	
 }
