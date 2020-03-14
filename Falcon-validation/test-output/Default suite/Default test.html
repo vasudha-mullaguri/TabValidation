@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Mar 13 19:47:44 IST 2020</td>
+<td>Started on:</td><td>Sat Mar 14 15:03:48 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>17 seconds (17798 ms)</td>
+<tr><td>Total time:</td><td>13 seconds (13944 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,15 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.atmecs.Falcon.tests.LoginPageTest.locator()'><b>locator</b><br>Test class: com.atmecs.Falcon.tests.LoginPageTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h3[@class=&quot;ng-binding ng-scope&quot;]&quot;}
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//option[text()=&apos;Select Customer&apos;]/parent::select&quot;}
   (Session info: chrome=80.0.3987.132)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;ATMECSINDT-073&apos;, ip: &apos;30.30.30.118&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\VASUDH~1.MUL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55204}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 53411e12c65c480e7d14eeb972dae8f9
-*** Element info: {Using=xpath, value=//h3[@class=&quot;ng-binding ng-scope&quot;]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\VASUDH~1.MUL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:59928}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 62096a616c625b648a3871c1d46146da
+*** Element info: {Using=xpath, value=//option[text()=&apos;Select Customer&apos;]/parent::select}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -100,8 +100,8 @@ Session ID: 53411e12c65c480e7d14eeb972dae8f9
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at com.atmecs.Falcon.helpers.CommonHelpers.findElement(CommonHelpers.java:26)
-	at com.atmecs.Falcon.helpers.CommonHelpers.textvalidate(CommonHelpers.java:103)
-	at com.atmecs.Falcon.tests.LoginPageTest.locator(LoginPageTest.java:54)
+	at com.atmecs.Falcon.helpers.CommonHelpers.dropDown(CommonHelpers.java:87)
+	at com.atmecs.Falcon.tests.LoginPageTest.locator(LoginPageTest.java:60)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -130,16 +130,16 @@ Session ID: 53411e12c65c480e7d14eeb972dae8f9
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace949767857", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace949767857'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h3[@class=&quot;ng-binding ng-scope&quot;]&quot;}
+</pre></div><a href='#' onClick='toggleBox("stack-trace429353573", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace429353573'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//option[text()=&apos;Select Customer&apos;]/parent::select&quot;}
   (Session info: chrome=80.0.3987.132)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;ATMECSINDT-073&apos;, ip: &apos;30.30.30.118&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\VASUDH~1.MUL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55204}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 53411e12c65c480e7d14eeb972dae8f9
-*** Element info: {Using=xpath, value=//h3[@class=&quot;ng-binding ng-scope&quot;]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\VASUDH~1.MUL\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:59928}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 62096a616c625b648a3871c1d46146da
+*** Element info: {Using=xpath, value=//option[text()=&apos;Select Customer&apos;]/parent::select}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -155,8 +155,8 @@ Session ID: 53411e12c65c480e7d14eeb972dae8f9
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at com.atmecs.Falcon.helpers.CommonHelpers.findElement(CommonHelpers.java:26)
-	at com.atmecs.Falcon.helpers.CommonHelpers.textvalidate(CommonHelpers.java:103)
-	at com.atmecs.Falcon.tests.LoginPageTest.locator(LoginPageTest.java:54)
+	at com.atmecs.Falcon.helpers.CommonHelpers.dropDown(CommonHelpers.java:87)
+	at com.atmecs.Falcon.tests.LoginPageTest.locator(LoginPageTest.java:60)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -186,7 +186,7 @@ Session ID: 53411e12c65c480e7d14eeb972dae8f9
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>2</td>
+<td>1</td>
 <td>com.atmecs.Falcon.tests.LoginPageTest@5ae63ade</td></tr>
 </table><p>
 </body>
