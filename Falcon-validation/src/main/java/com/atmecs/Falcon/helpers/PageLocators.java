@@ -31,13 +31,15 @@ public class PageLocators {
     public String val_restapitable;
     public String restapi_heading;
     public String val_restapi_heading;
-    
     public String dropdown_customer;
     public String customer_option;
     public String dropdown_module;
     public String module_option;
     public String dropdown_status;
     public String status_option;
+    public String dropdown_status_pass;
+    public String dropdown_status_fail;
+   public String  dropdown_status_skip;
     
 
 	
@@ -65,6 +67,9 @@ public class PageLocators {
 		module_option = property.getProperty("loc_module_option");
 		dropdown_status = property.getProperty("loc_dropdown_status");
 		status_option = property.getProperty("loc_status_option");
+		dropdown_status_pass=property.getProperty("loc_dropdown_status_pass");
+		dropdown_status_fail=property.getProperty("loc_dropdown_status_fail");
+		dropdown_status_skip=property.getProperty("loc_dropdown_status_skip");
 
 	}
 

@@ -84,7 +84,7 @@ public class CommonHelpers {
 	}
 	
 	  public static List<WebElement> dropDown(WebDriver driver, String mainMenu, String subMenu) throws Exception {
-		  WebElement element = driver.findElement(By.xpath("//option[text()='Select Customer']/parent::select"));
+		  WebElement element = CommonHelpers.findElement(driver, "Xpath", mainMenu);
 		  Select select = new Select(element);
 		  select.selectByVisibleText(subMenu);
 		  List<WebElement> elements = select.getOptions();
@@ -127,5 +127,10 @@ public class CommonHelpers {
 		System.out.println("Attribute not found"+e.getMessage());
 	}
 	}
+	public static void tablevalidation(WebDriver driver,String actual,String expected) {
+		Assert.assertEquals(actual, expected);
+		System.out.println("assertion passed:"+expected);
+	}
+	
 	
 }
