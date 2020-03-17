@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="14750" started-at="2020-03-14T15:21:32 IST" finished-at="2020-03-14T15:21:47 IST">
+  <suite name="Default suite" duration-ms="18862" started-at="2020-03-17T10:55:44 IST" finished-at="2020-03-17T10:56:03 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="14750" started-at="2020-03-14T15:21:32 IST" finished-at="2020-03-14T15:21:47 IST">
+    <test name="Default test" duration-ms="18862" started-at="2020-03-17T10:55:44 IST" finished-at="2020-03-17T10:56:03 IST">
       <class name="com.atmecs.Falcon.tests.LoginPageTest">
-        <test-method status="PASS" signature="invokeBrowser()[pri:0, instance:com.atmecs.Falcon.tests.LoginPageTest@5ae63ade]" name="invokeBrowser" is-config="true" duration-ms="12271" started-at="2020-03-14T15:21:32 IST" finished-at="2020-03-14T15:21:44 IST">
+        <test-method status="PASS" signature="invokeBrowser()[pri:0, instance:com.atmecs.Falcon.tests.LoginPageTest@5ae63ade]" name="invokeBrowser" is-config="true" duration-ms="12270" started-at="2020-03-17T10:55:44 IST" finished-at="2020-03-17T10:55:56 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invokeBrowser -->
-        <test-method status="PASS" signature="locator()[pri:0, instance:com.atmecs.Falcon.tests.LoginPageTest@5ae63ade]" name="locator" duration-ms="2432" started-at="2020-03-14T15:21:44 IST" finished-at="2020-03-14T15:21:47 IST">
+        <test-method status="PASS" signature="locator()[pri:0, instance:com.atmecs.Falcon.tests.LoginPageTest@5ae63ade]" name="locator" duration-ms="6536" started-at="2020-03-17T10:55:56 IST" finished-at="2020-03-17T10:56:03 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- locator -->
       </class> <!-- com.atmecs.Falcon.tests.LoginPageTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

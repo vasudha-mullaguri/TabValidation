@@ -28,12 +28,13 @@ public class LoginPageTest extends BaseClass {
 	Properties property;
 	Properties property1;
 	PageLocators path = new PageLocators();
+	PageLocators path_val=new PageLocators();
 
 	@Test
 	public void locator() throws Exception {
 		
 		path.data();
-		path.getValidationData();
+		path_val.getValidationData();
 		property=ReadProperties.loadProperty(FilePaths.LOGIN);
 		property1=ReadProperties.loadProperty(FilePaths.VALIDATION);
 		
@@ -86,16 +87,16 @@ public class LoginPageTest extends BaseClass {
 			System.out.println("list for customer_falcon:"+listOptions.get(count).getText());
 		}
 		
-		CommonHelpers.tablevalidation(driver,listOptions.get(0).getText() , property.getProperty("val.restapitable1"));
-		CommonHelpers.tablevalidation(driver,listOptions.get(1).getText() , property.getProperty("val.restapitable2"));
-		CommonHelpers.tablevalidation(driver,listOptions.get(2).getText() , property.getProperty("val.restapitable3"));
-		CommonHelpers.tablevalidation(driver,listOptions.get(3).getText() , property.getProperty("val.restapitable4"));
-		CommonHelpers.tablevalidation(driver,listOptions.get(4).getText() , property.getProperty("val.restapitable5"));
-		CommonHelpers.tablevalidation(driver,listOptions.get(5).getText() , property.getProperty("val.restapitable6"));
-		CommonHelpers.tablevalidation(driver,listOptions.get(6).getText() , property.getProperty("val.restapitable7"));
-		CommonHelpers.tablevalidation(driver,listOptions.get(7).getText() , property.getProperty("val.restapitable8"));
-		CommonHelpers.tablevalidation(driver,listOptions.get(8).getText() , property.getProperty("val.restapitable9"));
-		CommonHelpers.tablevalidation(driver,listOptions.get(9).getText() , property.getProperty("val.restapitable10"));
+		CommonHelpers.tablevalidation(driver,listOptions.get(0).getText() , property1.getProperty("val.restapitable1"));
+		CommonHelpers.tablevalidation(driver,listOptions.get(1).getText() , property1.getProperty("val.restapitable2"));
+		CommonHelpers.tablevalidation(driver,listOptions.get(2).getText() , property1.getProperty("val.restapitable3"));
+		CommonHelpers.tablevalidation(driver,listOptions.get(3).getText() , property1.getProperty("val.restapitable4"));
+		CommonHelpers.tablevalidation(driver,listOptions.get(4).getText() , property1.getProperty("val.restapitable5"));
+		CommonHelpers.tablevalidation(driver,listOptions.get(5).getText() , property1.getProperty("val.restapitable6"));
+		CommonHelpers.tablevalidation(driver,listOptions.get(6).getText() , property1.getProperty("val.restapitable7"));
+		CommonHelpers.tablevalidation(driver,listOptions.get(7).getText() , property1.getProperty("val.restapitable8"));
+		CommonHelpers.tablevalidation(driver,listOptions.get(8).getText() , property1.getProperty("val.restapitable9"));
+		CommonHelpers.tablevalidation(driver,listOptions.get(9).getText() , property1.getProperty("val.restapitable10"));
 		
 		//validating-module
 		CommonHelpers.dropDown(driver, path.dropdown_module, "createFalconPosts");
@@ -112,15 +113,15 @@ public class LoginPageTest extends BaseClass {
 			System.out.println("list for status_pass:"+listOptions1.get(count1).getText());
 		}
 	
-		CommonHelpers.tablevalidation(driver,listOptions1.get(0).getText() , property.getProperty("val.restapitable1"));
-		CommonHelpers.tablevalidation(driver,listOptions1.get(1).getText() , property.getProperty("val.restapitable2"));
-		CommonHelpers.tablevalidation(driver,listOptions1.get(2).getText() , property.getProperty("val.restapitable3"));
-		CommonHelpers.tablevalidation(driver,listOptions1.get(3).getText() , property.getProperty("val.restapitable4"));
-		CommonHelpers.tablevalidation(driver,listOptions1.get(4).getText() , property.getProperty("val.restapitable6"));
-		CommonHelpers.tablevalidation(driver,listOptions1.get(5).getText() , property.getProperty("val.restapitable7"));
-		CommonHelpers.tablevalidation(driver,listOptions1.get(6).getText() , property.getProperty("val.restapitable8"));
-		CommonHelpers.tablevalidation(driver,listOptions1.get(7).getText() , property.getProperty("val.restapitable9"));
-		CommonHelpers.tablevalidation(driver,listOptions1.get(8).getText() , property.getProperty("val.restapitable10"));
+		CommonHelpers.tablevalidation(driver,listOptions1.get(0).getText() , property1.getProperty("val.restapitable1"));
+		CommonHelpers.tablevalidation(driver,listOptions1.get(1).getText() , property1.getProperty("val.restapitable2"));
+		CommonHelpers.tablevalidation(driver,listOptions1.get(2).getText() , property1.getProperty("val.restapitable3"));
+		CommonHelpers.tablevalidation(driver,listOptions1.get(3).getText() , property1.getProperty("val.restapitable4"));
+		CommonHelpers.tablevalidation(driver,listOptions1.get(4).getText() , property1.getProperty("val.restapitable6"));
+		CommonHelpers.tablevalidation(driver,listOptions1.get(5).getText() , property1.getProperty("val.restapitable7"));
+		CommonHelpers.tablevalidation(driver,listOptions1.get(6).getText() , property1.getProperty("val.restapitable8"));
+		CommonHelpers.tablevalidation(driver,listOptions1.get(7).getText() , property1.getProperty("val.restapitable9"));
+		CommonHelpers.tablevalidation(driver,listOptions1.get(8).getText() , property1.getProperty("val.restapitable10"));
 		
 		CommonHelpers.dropDown(driver, path.dropdown_status_fail, "Fail");
 		CommonHelpers.explicitWait(driver,path.dropdown_status_fail );
@@ -130,7 +131,7 @@ public class LoginPageTest extends BaseClass {
 		for(int count2=0; count2<listOptions3.size(); count2++) {
 			System.out.println("failed:"+listOptions3.get(count2).getText());
 		}
-		CommonHelpers.tablevalidation(driver, listOptions3.get(0).getText(),property.getProperty("val.restapitable5"));
+		CommonHelpers.tablevalidation(driver, listOptions3.get(0).getText(),property1.getProperty("val.restapitable5"));
 		
 		//validating-status_skip
 		CommonHelpers.dropDown(driver,path.dropdown_status_skip, "Skip"); 
